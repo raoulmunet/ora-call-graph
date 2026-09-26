@@ -1,0 +1,21 @@
+[build-system]
+requires=["setuptools>=68"]
+build-backend="setuptools.build_meta"
+[project]
+name="ora-call-graph"
+version="0.1.0"
+description="Lightweight Oracle PL/SQL call graph generator."
+readme="README.md"
+requires-python=">=3.10"
+license={text="MIT"}
+authors=[{name="Raoul Munet"}]
+dependencies=[]
+[project.optional-dependencies]
+dev=["pytest>=8"]
+[project.scripts]
+ora-call-graph="ora_call_graph.cli:main"
+[tool.setuptools.packages.find]
+where=["src"]
+[tool.pytest.ini_options]
+pythonpath=["src"]
+testpaths=["tests"]
